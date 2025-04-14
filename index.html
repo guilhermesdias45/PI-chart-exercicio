@@ -24,17 +24,17 @@
 </style>
 <body>
     <div>
-        <canvas id="canvas_teste"></canvas>
+        <canvas id="canvas_line"></canvas>
     </div>
     <div>
-        <canvas id="canvas_teste2"></canvas>
+        <canvas id="canvas_bar"></canvas>
     </div>
 </body>
 </html>
 <script>
     const horas = ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
 
-    const data = {
+    const data_line = {
         labels: horas,
         datasets: [{
           label: 'Temperatura (ºC)',
@@ -50,9 +50,9 @@
           borderWidth: 3
         }]}
 
-    const config = {
+    const config_line = {
       type: 'line',
-      data: data,
+      data: data_line,
       options: {}
     };
 
@@ -82,13 +82,13 @@
     };
     
 
-    const chart = new Chart(
-        document.getElementById('canvas_teste'),
-        config
+    const chart_line = new Chart(
+        document.getElementById('canvas_line'),
+        config_line
     );
 
     const chart_bar = new Chart(
-        document.getElementById('canvas_teste2'),
+        document.getElementById('canvas_bar'),
         config_bar
     )
 
